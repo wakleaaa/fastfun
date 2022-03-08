@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: havefun
+  name: fastfun
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: havefun
+      app: fastfun
   template:
     metadata:
       labels:
-        app: havefun
+        app: fastfun
     spec:
       containers:
-      - image: okteto.dev/havefun:latest
-        name: havefun
+      - image: okteto.dev/fastfun:latest
+        name: fastfun
         ports:
         - containerPort: 8080
         env:
